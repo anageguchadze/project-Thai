@@ -1,0 +1,48 @@
+section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    text-align: center;
+    margin-top: 2%;
+    gap: 10px;
+}
+.line{
+    height: 80px;
+}
+.white-background {
+    animation: fadeOut 2s forwards; 
+  }
+  @keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .text {
+      width: 90%; 
+      font-size: 14px;
+      height: auto;
+      margin-top: 8%;
+    }
+    .line{
+        height: 60px;
+    }
+    .logo{
+        width: 100px;
+    }
+  }
+

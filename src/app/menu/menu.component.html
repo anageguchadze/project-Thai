@@ -1,0 +1,21 @@
+<section class="background white-background">
+    <h2>Categories</h2>
+    <div class="category-container">
+        <button class="category-button" *ngFor="let category of categories" (click)="selectCategory(category.id)">
+            {{ category.name }}
+        </button>
+    </div>
+
+
+    <h2 *ngIf="selectedCategoryId !== null">Products</h2>
+    <div class="card-container" *ngIf="selectedCategoryId !== null && products.length > 0">
+        <div class="card" *ngFor="let product of products">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <div class="card-body">
+        <h3>{{ product.name }}</h3>
+        <p>Price: ${{ product.price }}</p>
+        </div>
+    </div>
+    </div>
+</section>
+
